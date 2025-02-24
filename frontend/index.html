@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Personal Finance Tracker</h1>
+
+        <!-- Form Container -->
+        <div id="form-container">
+            <!-- Registration Form -->
+            <div class="form-box" id="register-form">
+                <h2>Create Account</h2>
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <button onclick="registerUser()">Register</button>
+                <p>Already have an account? <a href="javascript:void(0)" onclick="toggleForms()">Login here</a></p>
+            </div>
+
+            <!-- Login Form -->
+            <div class="form-box" id="login-form" style="display:none;">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email" required />
+                <input type="password" id="login-password" placeholder="Password" required />
+                <button onclick="loginUser()">Login</button>
+                <p>Don't have an account? <a href="javascript:void(0)" onclick="toggleForms()">Create one</a></p>
+            </div>
+        </div>
+
+        <!-- User Info -->
+        <div id="user-info" style="display:none;">
+            <h3>Welcome, <span id="user-name"></span></h3>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
